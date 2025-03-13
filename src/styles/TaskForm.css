@@ -1,0 +1,82 @@
+.task-manager {
+    max-width: 90%; /* Changed for better responsiveness */
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+.add-task-btn {
+    background-color: #97D4E1;
+    color: black;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners */
+    font-weight: bold; /* Bold font */
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+  
+.task-form input,
+.task-form textarea {
+    padding: 10px; /* Ensure padding is responsive */
+    border: #4fbac5; /* Use CSS variable for border color */
+    border-radius: 4px;
+    background-color: #dbe4e6; /* Use CSS variable for background color */
+    color: var(--text-color); /* Use CSS variable for text color */
+    resize: none;
+}
+
+.dark .task-form input,
+.dark .task-form textarea {
+    background-color: #ffffff; /* Dark mode background color */
+    color: #2d3748; /* Dark mode text color */
+    border-color: #4a5568; /* Dark mode border color */
+    resize: none;
+    font-size: small;
+}
+  
+.task-form button {
+    background-color: #4fbac5;
+    color: black;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.dark .task-form button {
+    background-color: #ffffff; /* Dark mode button background color */
+    color: #0f1114; /* Dark mode button text color */
+    padding: 10px;
+    border: 1px solid #000000; /* Dark mode border color */
+    cursor: pointer;
+    font-size: medium;
+    border-radius: 20px;
+}
+  
+.task-summary {
+    text-align: center;
+}
+  
+.summary-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+  
+.summary-stats span {
+    margin-right: 20px;
+}
+  
+.summary-stats span:last-child {
+    margin-right: 0;
+}
