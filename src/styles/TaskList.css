@@ -1,0 +1,171 @@
+.task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+}
+  
+.task-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #A8DDE5; /* Use CSS variable for background color */
+    color: var(--text-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+}
+  
+.task-item.completed {
+    background-color: #C7E0CC; /* Use CSS variable for completed tasks */
+}
+.dark .task-item.completed {
+    background-color: #364B3E; /* Use CSS variable for completed tasks */
+}
+  
+.task-content {
+    width: 100%;
+    margin-bottom: 10px;
+}
+  
+.task-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+  
+.task-description {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+  
+.task-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+  
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    color: var(--text-secondary);
+    min-width: 30px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.action-btn:hover {
+    background-color: var(--hover-color);
+}
+  
+.toggle-btn {
+color: green;}
+  
+.toggle-btn.completed {
+    color: #0c66e3;
+}
+  
+.edit-btn {
+    color: blue;
+}
+.dark .edit-btn {
+    color: rgb(221, 221, 240);
+}
+  
+.delete-btn {
+    color: rgb(176, 61, 61);
+}
+  
+.task-edit {
+    width: 100%;
+}
+  
+.edit-input,
+.edit-textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-color); /* Use CSS variable for text color */
+    font-size: 14px;
+    resize: none;
+}
+  
+.edit-textarea {
+    min-height: 80px;
+    resize: none;
+}
+  
+.save-btn {
+    background-color: #F1FDFF;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+}
+  
+.save-btn:hover {
+    background-color:  #446971;
+    color: aliceblue;
+}
+  
+@media (min-width: 768px) {
+    .task-list {
+      max-width: 800px;
+    }
+  
+    .task-item {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .task-content {
+      flex-grow: 1;
+      flex-shrink: 1;
+      margin-right: 10px;
+      margin-bottom: 0;
+      min-width: 0;
+    }
+  
+    .task-actions {
+      flex-shrink: 0;
+      justify-content: flex-end;
+    }
+  
+    .save-btn {
+      width: auto;
+    }
+}
+.task-meta {
+    font-size: 12px;
+    color: var(--text-secondary); /* Use CSS variable for secondary text color */
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+  
+.task-meta span {
+    display: inline-block;
+    margin-right: 15px;
+}
