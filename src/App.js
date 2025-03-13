@@ -70,14 +70,17 @@ function App() {
   // Initialize IndexedDB and load data on mount
   useEffect(() => {
     const setupDB = async () => {
+  console.log("Initializing database...");
       dbRef.current = await initDB();
 
       // Load tasks from IndexedDB
       const allTasks = await dbRef.current.getAll('tasks');
+      console.log("Loaded tasks:", allTasks);
       dispatch({ type: 'SET_TASKS', payload: allTasks });
 
       // Load theme preference from IndexedDB
       const storedTheme = await dbRef.current.get('preferences', 'theme');
+      console.log("Loaded theme preference:", storedTheme);
       if (storedTheme !== undefined) {
         setDarkMode(storedTheme);
       }
@@ -292,4 +295,3 @@ const completedCount = tasks.filter(task => task.completed).length;
 }
 
 export default App;
-
